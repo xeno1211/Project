@@ -1,0 +1,45 @@
+<!-- 
+Author: Jeremy Heiner
+Class: IFT 458/598: Middleware Programming & Database Security
+Professor: Dinesh Sthapit
+Description: This is create a new loan form. It takes user input and passes it to the application.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Loan</title>
+</head>
+<body>
+
+    <main>
+        <form class="product-form" action="/loan/AddLoan123" method="POST">
+            <div class="form-control mx-auto" style="width: 200px">
+                <label for="customerName">Customer Name</label>
+                <input type= "text" name="customerName" id="customerName">
+                <label for="customerEmail">Email</label>
+                <input type= "text" name="customerEmail" id="customerEmail">
+                <label for="loanAmount">Loan Amount:</label>
+                <input type= "text" name="loanAmount" id="loanAmount">
+                <label for="interest">Interest:</label>
+                <input type= "text" name="interest" id="interest">
+                <label for="loanType">Loan Type:</label>
+                <input type= "text" name="loanType" id="loanType">
+                <label for="loanTermYears">Loan Term:</label>
+                <input type= "text" name="loanTermYears" id="loanTermYears">
+                
+
+            </div>
+            <button class="btn" type="submit">New Loan</button>
+
+        </form>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!-- 
+Author: Jeremy Heiner
+Class: IFT 458/598: Middleware Programming & Database Security
+Professor: Dinesh Sthapit
+Description: This page displays all users in a cool, dynamic table.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loan Data Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td{
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:hover{
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Data Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Date Created</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (let i = 0; i < data.length; i++){ %>
+                <tr>
+                    <td><%= data[i].name %></td>
+                    <td><%= data[i].email%></td>
+                    <td>Password Redacted</td>
+                    <td><%= data[i].date%></td>
+               </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+
+</html>
